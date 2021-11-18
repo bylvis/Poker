@@ -1,18 +1,32 @@
+/* eslint no-undef: "off"*/
+/* global jQuery, padding */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Force from './06force';
 import * as d3 from 'd3'
+import Force from './06force';
 
+import Bar from './01bar';
+import Ellipse from './02ellipse';
+import Line from './03line'
+import Polygon from './04polygon';
+import Polyline from './05polyline';
+import Forcelink from './07forcelink';
 class App extends React.Component{
-    render(){
-        return(
-            <div className='todolist'>
-                todolist
-                <Force></Force>
-            </div>
-        )
-    }
+  render(){
+    return(
+      <div className='App'>
+        <Bar></Bar>
+        <Ellipse></Ellipse>
+        <Line></Line>
+        <Polygon></Polygon>
+        <Polyline></Polyline>
+        <Force></Force>
+        <Forcelink></Forcelink>
+      </div>
+    )
+  }
 }
+
 
 ReactDOM.render(<App></App>,document.querySelector('#root'))

@@ -1,1 +1,3 @@
-
+[class^='showNode']{
+    visibility: hidden;
+}

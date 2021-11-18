@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as d3 from 'd3'
-
+import Force from './06force';
 
 import Bar from './01bar';
 import Ellipse from './02ellipse';
@@ -20,6 +20,7 @@ class App extends React.Component{
         <Line></Line>
         <Polygon></Polygon>
         <Polyline></Polyline>
+        <Force></Force>
       </div>
     )
   }
