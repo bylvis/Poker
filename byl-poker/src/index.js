@@ -1,17 +1,48 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import reactDom from "react-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+// 导航目录
+// import Root from "./Root";
+// 主页面
+import Main from "./main";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// 鼓组件
+import Drum from "./components/drum/drum.js";
+// 时钟组件
+import Clock from "./components/clock/clock";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+class App extends React.Component {
+    render() {
+        return (
+            <Router>
+                <div>
+                    {/* <h1>主页</h1> */}
+                    <Link to='/'></Link>
+                    <Link to='/main'></Link>
+                    <Link to='/drum'></Link>
+                    <Link to='/clock'></Link>
+                    <Switch>
+                        <Route path='/' exact>
+                            {/* <Root></Root> */}
+                            <Main></Main>
+                        </Route>
+                        <Route path='/main' exact>
+                            <Main></Main>
+                        </Route>
+                        <Route path='/drum' exact>
+                            <Drum></Drum>
+                        </Route>
+                        <Route path='/clock' exact>
+                            <Clock></Clock>
+                        </Route>
+                    </Switch>
+
+                    {/* <Route path='/main' exact component={ Main }></Route> */}
+                </div>
+            </Router>
+        )
+    }
+}
+
+reactDom.render(<App></App>,document.querySelector('#root'))

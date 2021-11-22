@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  /* 从父元素继承 */
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: #6B0F9C;
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  /* 切换动画 */
+  transition:
+  /* cubic-bezier 贝塞尔曲线 
+    第一个参数是 初始时间 和 初始状态
+    最后一个参数是 最终时间 和 最终状态
+  */
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  /* 均分 占一份 */
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel1 { 
+  background:url(./svg/JAVASCRIPT.svg) ;
+  background-size: 100% 100%;
+}
+.panel2 { 
+  background:url(./svg/webgl.svg) ;
+  background-size: 100% 100%;
+}
+.panel3 { 
+  background:url(./svg/pie.svg); 
+  background-size: 100% 100%;
+}
+.panel4 { 
+  background:url(./svg/blog.svg); 
+  background-size: 100% 100%;
+}
+.panel5 { 
+  background:url(./svg/code.svg);
+  background-size: 100% 100%;
+}
+
+.panel >*:first-child{transform: translateY(-100%);}
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel >*:last-child{transform: translateY(100%);}
+.panel.open-active > *:last-child { transform: translateY(0); }
+/* Flex Children */
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 2em;
+}
+
+.panel.open {
+  flex:8;
+  font-size:  2em;
+}
+.fotter{
+  position: relative;
+  background-color:white;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 200%;
+}
+.fotter a{
+  text-decoration: none;
+  /* text-align: center; */
+  color:black;
+  font-size: 0.5em;
+  width: 100%;
 }
