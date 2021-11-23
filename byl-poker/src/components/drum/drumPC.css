@@ -1,16 +1,10 @@
 .keys {
     font-size: 10px;
-    background: url('./drum.jpg') bottom center;
-    background-size: cover;
-  }
-  
-  .keys {
+    background: url('./drum.svg');
+    background-size: 100% 100%;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-  }
-  
-  .keys {
     display: flex;
     flex: 1;
     min-height: 100vh;
@@ -18,7 +12,10 @@
     justify-content: center;
   }
   
-  .key {
+  
+  
+  
+  .keys .key {
     border: .4rem solid black;
     border-radius: .5rem;
     margin: 1rem;
@@ -34,19 +31,31 @@
   
   .playing {
     transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+    border-color: #0a8df8;
+    box-shadow: 0 0 1rem #00ccff;
   }
   
-  kbd {
+   kbd {
     display: block;
     font-size: 4rem;
+    pointer-events: none;
   }
   
   .sound {
+    pointer-events: none;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: #ffc600;
   }
-  
+  .drumLink{
+    position: absolute;
+    top:0;
+    left:0;
+    text-decoration: none;
+    font-size: 16px;
+    width: 10vh;
+    height: 10vh;
+    background:url(../../svg/home.svg);
+    background-size: 100% 100%;
+  }

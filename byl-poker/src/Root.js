@@ -1,5 +1,6 @@
 
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route,Link} from 'react-router-dom'
 const Root = ()=>{
 	return (
         <div>

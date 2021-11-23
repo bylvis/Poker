@@ -1,12 +1,13 @@
 import React from "react"
 // import './drumPC.css'
-
+// import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { HashRouter as Router, Switch, Route,Link} from 'react-router-dom'
 class Drum extends React.Component {
     componentWillMount(){
         if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i))) {
             // document.write('<link href="shouji.css" rel="stylesheet" type="text/css" media="screen" />');
             require('./drumMobile.css');
-            
+            console.log('mobile');
         }
             else {
             // document.write('<link href="pc.css" rel="stylesheet" type="text/css" media="screen" />');
@@ -37,9 +38,10 @@ class Drum extends React.Component {
             const key = e.target.getAttribute('data-key');
             const audio = document.querySelector(`audio[data-key="${key}"]`)
             if(!audio) return
+            // 当前音频 时间归0 不然 重复点击 会有bug
             audio.currentTime = 0
             audio.play()
-            // 当前音频 时间归0 不然 重复点击 会有bug
+            div.classList.add('playing')
         }
         const keys = document.querySelectorAll('.key')
         // 给每个按键 添加事件 渐变完成 去除类
@@ -50,7 +52,7 @@ class Drum extends React.Component {
     }
     render() {
         return (
-            <div>
+            
                 <div className="keys">
                     <div data-key="65"className="key">
                         <kbd data-key="65">A</kbd>
@@ -66,7 +68,7 @@ class Drum extends React.Component {
                     </div>
                     <div data-key="70" className="key">
                         <kbd data-key="70">F</kbd>
-                        <span data-key="70" className="sound">openhat</span>
+                        <span data-key="70" className="sound">hat</span>
                     </div>
                     <div data-key="71" className="key">
                         <kbd data-key="71">G</kbd>
@@ -88,8 +90,8 @@ class Drum extends React.Component {
                         <kbd data-key="76">L</kbd>
                         <span data-key="76" className="sound">tink</span>
                     </div>
-                </div>
-
+                
+                <Link to='/main' className='drumLink'></Link>
                 <audio data-key="65" src="sounds/clap.wav"></audio>
                 <audio data-key="83" src="sounds/hihat.wav"></audio>
                 <audio data-key="68" src="sounds/kick.wav"></audio>

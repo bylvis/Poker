@@ -13,12 +13,12 @@
     background-color: pink;
     /* background-size:100% 100% */
 }
-.smallBox1-1:nth-child(1){
+.smallBox1_1:nth-child(1){
     /* display: block; */
     background:url(../drum/drum.svg);
     background-size:100% 100%
 }
-.smallBox1-1:nth-child(2){
+.smallBox1_1:nth-child(2){
     /* display: block; */
     background:url(../clock/clock.svg);
     background-size:100% 100%

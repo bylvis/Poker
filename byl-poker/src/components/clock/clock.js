@@ -1,5 +1,7 @@
 import React from "react"
 import './clock.css'
+// import { BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { HashRouter as Router, Switch, Route,Link} from 'react-router-dom'
 class Clock extends React.Component {
     componentDidMount() {
         // 选择时 分 秒 的针
@@ -33,12 +35,16 @@ class Clock extends React.Component {
     }
     render() {
         return (
+            <div>
+            <Link to='/main' class='clockLink'></Link>
             <div class="clock">
+                
                 <div class="clock-face">
                     <div class="hand hour-hand"></div>
                     <div class="hand min-hand"></div>
                     <div class="hand second-hand"></div>
                 </div>
+            </div>
             </div>
         )
     }

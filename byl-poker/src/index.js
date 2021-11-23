@@ -1,6 +1,7 @@
 import React from "react";
 import reactDom from "react-dom";
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route,Link} from 'react-router-dom'
 // 导航目录
 // import Root from "./Root";
 // 主页面
