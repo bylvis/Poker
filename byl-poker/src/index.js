@@ -1,7 +1,7 @@
 import React from "react";
 import reactDom from "react-dom";
 // import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import { HashRouter as Router, Switch, Route,Link} from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
 // 导航目录
 // import Root from "./Root";
 // 主页面
@@ -11,7 +11,8 @@ import Main from "./main";
 import Drum from "./components/drum/drum.js";
 // 时钟组件
 import Clock from "./components/clock/clock";
-
+import FastClick from 'fastclick'
+FastClick.attach(document.body);
 
 class App extends React.Component {
     render() {
@@ -46,4 +47,4 @@ class App extends React.Component {
     }
 }
 
-reactDom.render(<App></App>,document.querySelector('#root'))
+reactDom.render(<App></App>, document.querySelector('#root'))

@@ -37,8 +37,8 @@
   
   .playing {
     transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+    border-color: #00ccff;
+    box-shadow: 0 0 1rem #00ccff;
   }
   
  .keys kbd {

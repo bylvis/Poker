@@ -1,3 +1,17 @@
+@media screen and (min-width:220px) and (max-width:500px) {
+  .panels {
+    min-height: 100vh ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column !important;
+
+  }
+  .panel >*:first-child{transform: translateX(-100%) !important;}
+  .panel >*:last-child{transform: translateX(100%) !important;}
+  .panel.open-active > *:first-child { transform: translateX(0) !important; }
+  .panel.open-active > *:last-child { transform: translateX(0) !important; }
+}
+
 html {
   box-sizing: border-box;
   background: #ffc600;
