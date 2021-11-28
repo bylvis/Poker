@@ -1,0 +1,67 @@
+#info{
+    width: 50px;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: pink; */
+}
+.contact{
+    position: relative;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.contact .contact_son{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.contact:nth-child(1){
+    background-color: rgb(230,22,45);
+}
+.contact:nth-child(1) .contact_son{
+    background-image: url(./weibo.svg);
+    background-size: 100% 100%;
+}
+.contact:nth-child(2){
+    background-color: rgb(0,0,0); 
+}
+.contact:nth-child(2) .contact_son{
+    background-image: url(./QQ.svg);
+    background-size: 100% 100%; 
+}
+.contact:nth-child(3){
+    background-color: rgb(9,133,221);
+}
+.contact:nth-child(3) .contact_son{
+    
+    background-image: url(./bilibili.svg);
+    background-size: 100% 100%; 
+}
+.contact:nth-child(4){
+    background-color: rgb(45,193,0);
+}
+.contact:nth-child(4) .contact_son{
+    
+    background-image: url(./wechat.svg);
+    background-size: 100% 100%; 
+}
+.contact:nth-child(5){
+    background-color: rgb(209, 209, 209);
+}
+.contact:nth-child(5) .contact_son{
+    
+    background-image: url(./emial.svg);
+    background-size: 100% 100%; 
+}
+.back{
+    width: 50px;
+    height: 10px;
+    background-color: rgb(211, 28, 28);
+}

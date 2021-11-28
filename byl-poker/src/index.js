@@ -12,6 +12,8 @@ import Drum from "./components/drum/drum.js";
 // 时钟组件
 import Clock from "./components/clock/clock";
 import FastClick from 'fastclick'
+
+
 FastClick.attach(document.body);
 
 class App extends React.Component {

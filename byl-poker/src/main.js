@@ -2,6 +2,8 @@ import React from "react"
 import './index.css'
 import Boxs from "./components/box/box"
 import Loading from "./components/loading/loading"
+import Info from "./components/info/info"
+
 class Main extends React.Component {
 
     componentDidMount() {
@@ -35,6 +37,7 @@ class Main extends React.Component {
         return (
             <div>
                 <Loading></Loading>
+                
                 <div className="panels">
                     <div className="panel panel1">
                         {/* 这里是分别给继承类名 然后根据nth of child 给每个格子背景图片 */}
@@ -63,6 +66,7 @@ class Main extends React.Component {
                         <Boxs list='AIList2'></Boxs>
                     </div>
                 </div>
+                <Info></Info>
                 <div className='fotter'>
                     <a href="https://beian.miit.gov.cn/" target="_blank">
                         蜀ICP备2021028064号-1

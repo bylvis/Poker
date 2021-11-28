@@ -36,13 +36,12 @@ class Clock extends React.Component {
     render() {
         return (
             <div>
-            <Link to='/main' class='clockLink'></Link>
-            <div class="clock">
-                
-                <div class="clock-face">
-                    <div class="hand hour-hand"></div>
-                    <div class="hand min-hand"></div>
-                    <div class="hand second-hand"></div>
+            <Link to='/main' className='clockLink'></Link>
+            <div className="clock">
+                <div className="clock-face">
+                    <div className="hand hour-hand"></div>
+                    <div className="hand min-hand"></div>
+                    <div className="hand second-hand"></div>
                 </div>
             </div>
             </div>
