@@ -11,6 +11,7 @@ import Main from "./main";
 import Drum from "./components/drum/drum.js";
 // 时钟组件
 import Clock from "./components/clock/clock";
+
 import FastClick from 'fastclick'
 
 

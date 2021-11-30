@@ -4,14 +4,23 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.1s linear;
     /* background: pink; */
 }
+.info_hide{
+    transform: translate(-100%,-50%) !important;
+}
+
 .contact{
     position: relative;
     height: 50px;
     width: 50px;
     text-align: center;
+    transition: all 0.1s linear;
     line-height: 50px;
+}
+.contact:hover{
+    width: 70px;
 }
 
 .contact .contact_son{
@@ -22,10 +31,10 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
-.contact:nth-child(1){
+.contact{
     background-color: rgb(230,22,45);
 }
-.contact:nth-child(1) .contact_son{
+.contact .contact_son{
     background-image: url(./weibo.svg);
     background-size: 100% 100%;
 }
@@ -60,8 +69,37 @@
     background-image: url(./emial.svg);
     background-size: 100% 100%; 
 }
-.back{
-    width: 50px;
-    height: 10px;
-    background-color: rgb(211, 28, 28);
+#info:hover .back{
+    visibility: visible;
 }
+.back{
+    width: 20px;
+    height: 20px;
+    /* background-color: rgb(211, 28, 28); */
+    visibility: hidden;
+}
+
+.arrow{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.back .arrow_left{
+    background-image: url(./arrow-left.svg);
+}
+.arrow_right{
+    display: none;
+    width: 15px;
+    height: 15px;
+    position: fixed;
+    right: -20%;
+    background-image: url(./arrow_right.svg);
+    background-size: 100% 100%;
+}
+.arrow_block{
+    display: block;
+}
+
